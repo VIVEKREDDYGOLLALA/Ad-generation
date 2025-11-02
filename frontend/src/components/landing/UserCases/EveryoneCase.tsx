@@ -1,0 +1,51 @@
+
+import { UserCase, Book } from '../UseCasesTypes';
+interface SmallBusinessesProps {
+  data: UserCase;
+  books: Book[];
+}
+const SmallBusinessesCase = ({
+  data,
+  books
+}: SmallBusinessesProps) => {
+  return <div className="max-w-5xl mx-auto my-10">
+      <div className="relative p-4 md:p-8 bg-white/10 backdrop-blur-sm rounded-xl">
+        <div className="flex gap-4 mb-4">
+          <div className="w-1/3 aspect-[4/5] bg-white/20 rounded-lg shadow-md overflow-hidden transform rotate-1 hover:rotate-0 transition-transform duration-300">
+            <img alt="Business Growth" className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1556761175-4f9f5c3b0b1a?w=500&h=600&fit=crop" />
+          </div>
+          <div className="w-2/3 aspect-[3/2] bg-white/20 rounded-lg shadow-md overflow-hidden transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+            <img alt="Small Business Tools" className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" />
+          </div>
+        </div>
+        
+        <div className="flex gap-4 relative">
+          <div className="w-1/2 aspect-[3/2] bg-white/20 rounded-lg shadow-md overflow-hidden transform translate-y-0 hover:-translate-y-1 transition-transform duration-300">
+            <img alt="Marketing Strategy" className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop" />
+          </div>
+          <div className="w-1/4 aspect-square bg-white/20 rounded-lg shadow-md overflow-hidden transform rotate-1 hover:rotate-0 transition-transform duration-300">
+            <img alt="Customer Engagement" className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=400&fit=crop" />
+          </div>
+          <div className="w-1/4 bg-white/20 rounded-lg p-4 shadow-md">
+            <p className="text-white font-medium text-lg mb-2">Business Tools</p>
+            <div className="flex flex-wrap gap-2">
+              <div className="h-6 w-6 rounded-full bg-[#6B5B95]"></div>
+              <div className="h-6 w-6 rounded-full bg-[#FEB236]"></div>
+              <div className="h-6 w-6 rounded-full bg-[#D64161]"></div>
+              <div className="h-6 w-6 rounded-full bg-[#FF7F50]"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="absolute right-8 top-1/3 bg-white/20 backdrop-blur-sm px-3 py-2 rounded-lg shadow-md transform rotate-3 hover:rotate-0 transition-transform duration-300 z-10">
+          <p className="text-sm text-white font-medium">Business System</p>
+        </div>
+        
+        <div className="absolute left-1/4 bottom-4 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full shadow-md flex items-center z-10">
+          <span className="h-2 w-2 bg-indigo-300 rounded-full mr-2"></span>
+          <span className="text-xs text-white font-medium">Business Mood</span>
+        </div>
+      </div>
+    </div>;
+};
+export default SmallBusinessesCase;
